@@ -1,5 +1,5 @@
 {
-  "name": "notamedia/yii2-sentry",
+  "name": "intersvyaz/yii2-sentry",
   "description": "Yii2 logger for Sentry",
   "keywords": [
     "sentry",
@@ -8,9 +8,9 @@
   "type": "yii2-extension",
   "license": "MIT",
   "require": {
-    "php": "^7.2|^8.0",
+    "php": "^7.2 || ^8.0",
     "yiisoft/yii2": "^2.0",
-    "sentry/sdk": "^3.0"
+    "sentry/sdk": "^3.0 || ^4.0"
   },
   "require-dev": {
     "codeception/codeception": "^4.0",

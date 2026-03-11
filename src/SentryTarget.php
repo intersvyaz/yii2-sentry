@@ -4,7 +4,7 @@
  * file that was distributed with this source code.
  */
 
-namespace notamedia\sentry;
+namespace intersvyaz\sentry;
 
 use Sentry\ClientBuilder;
 use Sentry\Event;

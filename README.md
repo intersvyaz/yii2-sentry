@@ -1,14 +1,9 @@
 # [Sentry](https://sentry.io) logger for Yii2
 
-[![Build Status](https://travis-ci.org/notamedia/yii2-sentry.svg)](https://travis-ci.org/notamedia/yii2-sentry)
-[![Latest Stable Version](https://poser.pugx.org/notamedia/yii2-sentry/v/stable)](https://packagist.org/packages/notamedia/yii2-sentry) 
-[![Total Downloads](https://poser.pugx.org/notamedia/yii2-sentry/downloads)](https://packagist.org/packages/notamedia/yii2-sentry) 
-[![License](https://poser.pugx.org/notamedia/yii2-sentry/license)](https://packagist.org/packages/notamedia/yii2-sentry)
-
 ## Installation
 
 ```bash
-composer require notamedia/yii2-sentry
+composer require intersvyaz/yii2-sentry
 ```
 
 Add target class in the application config:
@@ -16,20 +11,20 @@ Add target class in the application config:
 ```php
 return [
     'components' => [
-	    'log' => [
-		    'traceLevel' => YII_DEBUG ? 3 : 0,
-		    'targets' => [
-			    [
-				    'class' => 'notamedia\sentry\SentryTarget',
-				    'dsn' => 'http://2682ybvhbs347:235vvgy465346@sentry.io/1',
-				    'levels' => ['error', 'warning'],
-				    // Write the context information (the default is true):
-				    'context' => true,
-				    // Additional options for `Sentry\init`:
-				    'clientOptions' => ['release' => 'my-project-name@2.3.12']
-			    ],
-		    ],
-	    ],
+        'log' => [
+            'traceLevel' => YII_DEBUG ? 3 : 0,
+            'targets' => [
+                [
+                    'class' => 'intersvyaz\sentry\SentryTarget',
+                    'dsn' => 'http://2682ybvhbs347:235vvgy465346@sentry.io/1',
+                    'levels' => ['error', 'warning'],
+                    // Write the context information (the default is true):
+                    'context' => true,
+                    // Additional options for `Sentry\init`:
+                    'clientOptions' => ['release' => 'my-project-name@2.3.12']
+                ],
+            ],
+        ],
     ],
 ];
 ```
@@ -58,7 +53,7 @@ Writing messages with extra data:
 ```php
     'targets' => [
         [
-            'class' => 'notamedia\sentry\SentryTarget',
+            'class' => \intersvyaz\sentry\SentryTarget::class,
             'dsn' => 'http://2682ybvhbs347:235vvgy465346@sentry.io/1',
             'levels' => ['error', 'warning'],
             'context' => true, // Write the context information. The default is true.
@@ -83,7 +78,7 @@ Example:
     'extra' => 'value',
     'tags' => [
         'extraTagKey' => 'extraTagValue',
-    ]
+    ],
 ], 'category');
 ```
 

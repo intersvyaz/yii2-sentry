@@ -1,6 +1,6 @@
 <?php
 
-namespace notamedia\sentry\tests\unit;
+namespace intersvyaz\sentry\tests\unit;
 
 use Sentry\Event;
 use Sentry\EventHint;
@@ -12,7 +12,7 @@ use Sentry\SentrySdk;
 use Sentry\State\Scope;
 use Codeception\Test\Unit;
 use Sentry\ClientInterface;
-use notamedia\sentry\SentryTarget;
+use intersvyaz\sentry\SentryTarget;
 
 /**
  * Unit-tests for SentryTarget
